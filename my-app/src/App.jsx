@@ -1,4 +1,3 @@
-import React from "react";
 import Header from './assets/Header'
 import Home from './assets/Home'
 import About from './assets/About'

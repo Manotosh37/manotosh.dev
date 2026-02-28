@@ -1,5 +1,4 @@
-import React from "react";
-import profImage from "./Image/pf.jpg"
+import profImage from './pf.jpg'
 
 function About() {
     return (

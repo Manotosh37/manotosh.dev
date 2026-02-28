@@ -1,4 +1,3 @@
-import React from "react";
 import { Github, Linkedin, Mail, Twitter, ArrowUp } from 'lucide-react';
 
 function Footer() {

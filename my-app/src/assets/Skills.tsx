@@ -1,5 +1,3 @@
-import React from "react";
-
 function Skills() {
     const skillCategory =[
         {
@@ -36,7 +34,6 @@ function Skills() {
             <h2 className="text-4xl font-bold text-white mb-4 tracking-wide">Technical Skills</h2>
           </div>
           
-          {/* Skills Cards Grid - 2 rows, 3 columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {skillCategory.map((category) => (
               <div

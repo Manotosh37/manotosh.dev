@@ -1,4 +1,3 @@
-import React from "react";
 import Git from 'react-github-calendar'
 
 function GitCal() {
@@ -6,7 +5,7 @@ function GitCal() {
         <>
         <div className="bg-[#4a4a4a] p-8 rounded-2xl border-gray-600 shadow-2xl ">
             <div className="overflow-x-auto">
-                <Git username="Manotosh3" colorScheme="dark" theme={{dark:['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353']}}
+                <Git username="Manotosh37" colorScheme="dark" theme={{dark:['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353']}}
                 fontSize={12} blockSize={12} blockMargin={3} hideColorLegend={false} hideTotalCount={false}/>
             </div>
         

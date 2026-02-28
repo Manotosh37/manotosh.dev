@@ -1,113 +1,89 @@
 import { ExternalLink, Github, ChevronRight, ChevronLeft } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Projects() {
     const [currentPage, setCurrentPage] = useState(0);
     const projects = [
         {
-        title: 'My-travel-blog',
-        description: 'Wandering solo, collecting stories, and sharing the world through my eyes.',
-        image:"https://images.pexels.com/photos/2577274/pexels-photo-2577274.jpeg?_gl=1*tw5gms*_ga*MzgxNjQ0MjkyLjE3NTMzNDE5NTM.*_ga_8JE65Q40S6*czE3NTMzNDE5NTMkbzEkZzEkdDE3NTMzNDIwMTgkajU5JGwwJGgw",
-        tags: ['React', 'Node.js', 'mpx', 'Typescript', 'Next.js'],
+        title: 'NotiPilot Core',
+        description: 'A high-throughput notification orchestration engine capable of routing thousands of concurrent messages across Email, SMS, and Slack via a unified API. Features intelligent retry logic and provider failover.',
+        image:"https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg",
+        tags: ['Redis', 'Node.js', 'MongoDB', 'SystemDesign', 'React.js'],
+        github: '1',
+        live: '#'
+        },
+        {
+        title: 'OpsGuard', // Secure contract upload, smart search, template generator. Automated email reminders, e signature integration (DocuSign API). Audit trail, clause extraction using NLP. Role-based access, legal calendar, export to PDF/Word, invoice-sidecar.
+        description: 'A distributed observability suite designed to monitor production microservices. Features synthetic monitoring, real-time alerting, and an automated self-healing script that restarts failing Docker containers.',
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsX9N5wDg1qD4fPzJ0tSMWYzw__6vZ_xUVtfTEZBNyFN0jl6Jjh-3SDeRiuBNmdt49-6M",
+        tags: ['Docker', 'Kubernetes', 'Grafana', 'Terraform'],
         github: '#',
         live: '#'
         },
         {
-        title: 'CineGusser', // Secure contract upload, smart search, template generator. Automated email reminders, e signature integration (DocuSign API). Audit trail, clause extraction using NLP. Role-based access, legal calendar, export to PDF/Word, invoice-sidecar.
-        description: 'A full stack app',
-        image:"https://store-images.microsoft.com/image/apps.34621.9007199266556636.b4551e45-9512-4393-b3d5-b216b82715e8.737bac45-dc54-48bd-854e-c9894fbc66bd?h=1280",
-        tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        github: '#',
-        live: '#'
-        },
-        {
-        title: '3',
-        description: 'To-Do Application',
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfV39WzaCr66H9DwGafv-l8cuyZWaX3RHqfA&s",
+        title: 'SmartRoute',
+        description: 'An AI-driven microservice that optimizes notification delivery. Uses Vector Embeddings to detect spam patterns and semantic analysis to route urgent messages to SMS and low-priority ones to Email.',
+        image:"",
         tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
         github: '#',
         live: '#'
          },
         {
-        title: 'SentimentScope ', 
-        description: 'A full stack app',
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1d0Plvcud83tgqf9Y8FBNgdR74ZhX85U_JtG-u76zmHZ2YkRY",
-        tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
+        title: 'MergeMind ', 
+        description: 'An automated code review bot integrated into GitHub Actions. It analyzes Pull Request diffs using LLMs to detect bugs, enforce style guides, and provide performance optimization suggestions automatically.',
+        image:"https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg",
+        tags: ['GitHub API', 'Node.js', 'Webhooks', 'OpenAI', 'CI/CD'],
+        github: '#',
+        live: '2'
+        },
+        {
+        title: 'VibeWall',
+        description: 'A high-fidelity testimonial collection SaaS. Features a pixel-perfect masonry layout with entrance animations and a custom vanilla JS embed script that allows third-party websites to inject the widget seamlessly.',
+        image:"https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
+        tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Freamer Motion'],
+        github: '#',
+        live: '3'
+        },
+        {
+        title: 'Web3', // mobile aap  Scan pantry via camera/QR, gets real‑time inventory; suggests recipes based on what you have, your diet, local deals; auto‑generates shopping list.  AI expense splitter  inventory manager 
+        description: 'TBD',
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw2SCg3wtHJNSiauBeX3F4XPgrVE161BiC_A&s",
+        tags: ['/'],
         github: '#',
         live: '#'
         },
         {
-        title: 'Course Selling Application',
-        description: 'A full stack app', // DevOps-1
-        image:"https://cdn.wallpapersafari.com/88/91/NFkuMD.jpg",
-        tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
+        title: 'CineGuessr',
+        description: 'An interactive movie trivia application that integrates with the TMDB API to fetch real-time metadata. Features complex state management for scoring logic, debounced search implementation, and a responsive, gamified user interface.', // DevOps-2
+        image:"https://store-images.microsoft.com/image/apps.34621.9007199266556636.b4551e45-9512-4393-b3d5-b216b82715e8.737bac45-dc54-48bd-854e-c9894fbc66bd?h=1280",
+        tags: ['React', 'Node.js', 'TMBD API', 'Typescript', 'REST APIs', 'Tailwind CSS', 'Game Logic'],
+        github: '#',
+        live: '4'
+        },
+        {
+        title: 'My Personel Travel Blog',
+        description: 'A high-performance static blog utilizing a headless architecture. Implements a custom Markdown rendering pipeline with syntax highlighting, file-system based routing, and optimized image loading for near-instant page transitions.',
+        image:"https://images.pexels.com/photos/2577274/pexels-photo-2577274.jpeg",
+        tags: ['React', 'Markdown', 'Tailwind CSS', 'Typescript'],
         github: '#',
         live: '#'
         },
-        // {
-        // title: '6AI-Powered Smart Grocery List & Recipe Planner', // mobile aap  Scan pantry via camera/QR, gets real‑time inventory; suggests recipes based on what you have, your diet, local deals; auto‑generates shopping list.  AI expense splitter  inventory manager 
-        // description: 'A full stack app',
-        // image:"#",
-        // tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        // github: '#',
-        // live: '#'
-        // }
-        // {
-        // title: '7To-Do Application',
-        // description: 'A full stack app', // DevOps-2
-        // image:"#",
-        // tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        // github: '#',
-        // live: '#'
-        // },
-        // {
-        // title: '8To-Do Application',
-        // description: 'A full stack app', // AI- API
-        // image:"#",
-        // tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        // github: '#',
-        // live: '#'
-        // },
-        // {
-        // title: '9To-Do Application',
-        // description: 'A full stack app', // API- Trained
-        // image:"#",
-        // tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        // github: '#',
-        // live: '#'
-        // },
-        // {
-        // title: '10To-Do Application',
-        // description: 'A full stack app', // Web3- 1
-        // image:"#",
-        // tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        // github: '#',
-        // live: '#'
-        // },
-        // {
-        // title: '11To-Do Application',
-        // description: 'A full stack app', // Web3- 2
-        // image:"#",
-        // tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        // github: '#',
-        // live: '#'
-        // },
-        // {
-        // title: '12To-Do Application',
-        // description: 'A full stack app', // Start-up= 1
-        // image:"#",
-        // tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        // github: '#',
-        // live: '#'
-        // },
-        // {
-        // title: '13To-Do Application',
-        // description: 'A full stack app', // Start-up= 2
-        // image:"#",
-        // tags: ['React', 'Node.js', 'MongoDB', 'Typescript'],
-        // github: '#',
-        // live: '#'
-        // }
+        {
+        title: 'Text-to-SQL Generator',
+        description: 'A Generative AI tool designed to democratize database access for non-technical users. Leverages LLMs to parse natural language queries and transpile them into syntactically correct SQL commands, featuring error handling and syntax validation.',
+        image:"https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+        tags: ['React', 'NLP', 'Prompt', 'Typescript', 'OpenAI API'],
+        github: '5',
+        live: '#'
+        },
+        {
+        title: 'Sentiment Review Analyzer',
+        description: 'A Data Science pipeline that processes raw customer feedback to extract actionable insights. Utilizes Natural Language Processing (NLP) libraries to tokenize text and classify sentiment polarity (positive/negative) with high accuracy.', // Web3- 1
+        image:"https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg",
+        tags: ['React', 'Python', 'Pandas', 'Data Visualization', 'NLTK'],
+        github: '6',
+        live: '#'
+        }
     ];
 
     const projectsPerPage=6;
